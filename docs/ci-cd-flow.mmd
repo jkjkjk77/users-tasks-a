@@ -1,0 +1,7 @@
+flowchart TD
+    A[Push / Pull Request] --> B[Checkout]
+    B --> C[Install Python dependencies]
+    C --> D[Run 5 pytest test cases]
+    D -->|Pass| E[Build Docker Image]
+    D -->|Fail| F[Stop pipeline and report failure]
+    E --> G[CI job succeeds]

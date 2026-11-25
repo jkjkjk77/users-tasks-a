@@ -1,0 +1,6 @@
+flowchart LR
+    Client[Client / Browser] --> API[FastAPI Application]
+    API --> Users[Users Resource]
+    API --> Tasks[Tasks Resource]
+    Users --> DB[(SQLite Database)]
+    Tasks --> DB
